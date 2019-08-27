@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import{NgForm} from '@angular/forms';
+import{ ApiService} from '../api.service';
 @Component({
   selector: 'app-contact-us',
   templateUrl: './contact-us.component.html',
@@ -25,9 +26,16 @@ export class ContactUSComponent implements OnInit {
 
       this.getmessage=data.value.message;
       console.log(data.value.message);
+
+
+
+      this.apiService.insertData(data.value).subscribe((response)=>{
+        console.log(response);
+        alert('Succesfully Inserted')
+      })
     }
 
-  constructor() { }
+  constructor(private apiService:ApiService) { }
 
   ngOnInit() {
   }
