@@ -10,4 +10,9 @@ export class ApiService {
   insertData(data){
     return this.http.post("http://angular-info.herokuapp.com/read",data);
   }
+
+
+  getData(){
+    return this.http.get("http://angular-info.herokuapp.com/viewAPI");
+  }
 }

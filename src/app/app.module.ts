@@ -5,18 +5,29 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ContactUSComponent } from './contact-us/contact-us.component';
 import  {HttpClientModule}from '@angular/common/http';
+import { ViewcomponentComponent } from './viewcomponent/viewcomponent.component';
+import{ Routes,RouterModule} from '@angular/router';
+
+
+const appRoutes:Routes=[
+  
+    {path:'',component:ContactUSComponent},
+    {path:'view',component:ViewcomponentComponent}
+]
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    ContactUSComponent
+    ContactUSComponent,
+    ViewcomponentComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
-  bootstrap: [ NavbarComponent,ContactUSComponent,AppComponent]
+  bootstrap: [ NavbarComponent,AppComponent]
 })
 export class AppModule { }
