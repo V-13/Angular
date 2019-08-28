@@ -7,19 +7,22 @@ import { ContactUSComponent } from './contact-us/contact-us.component';
 import  {HttpClientModule}from '@angular/common/http';
 import { ViewcomponentComponent } from './viewcomponent/viewcomponent.component';
 import{ Routes,RouterModule} from '@angular/router';
+import { SearchComponent } from './search/search.component';
 
 
 const appRoutes:Routes=[
   
     {path:'',component:ContactUSComponent},
-    {path:'view',component:ViewcomponentComponent}
+    {path:'view',component:ViewcomponentComponent},
+    {path:'search',component:SearchComponent}
 ]
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     ContactUSComponent,
-    ViewcomponentComponent
+    ViewcomponentComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

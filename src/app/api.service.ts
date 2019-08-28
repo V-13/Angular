@@ -15,4 +15,9 @@ export class ApiService {
   getData(){
     return this.http.get("http://angular-info.herokuapp.com/viewAPI");
   }
+
+  searchData(data)
+  {
+    return this.http.post("http://angular-info.herokuapp.com/searchAPI",data);
+  }
 }
