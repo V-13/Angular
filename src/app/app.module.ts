@@ -8,13 +8,15 @@ import  {HttpClientModule}from '@angular/common/http';
 import { ViewcomponentComponent } from './viewcomponent/viewcomponent.component';
 import{ Routes,RouterModule} from '@angular/router';
 import { SearchComponent } from './search/search.component';
+import { DeleteComponent } from './delete/delete.component';
 
 
 const appRoutes:Routes=[
   
     {path:'',component:ContactUSComponent},
     {path:'view',component:ViewcomponentComponent},
-    {path:'search',component:SearchComponent}
+    {path:'search',component:SearchComponent},
+    {path:'delete',component:DeleteComponent}
 ]
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ const appRoutes:Routes=[
     NavbarComponent,
     ContactUSComponent,
     ViewcomponentComponent,
-    SearchComponent
+    SearchComponent,
+    DeleteComponent
   ],
   imports: [
     BrowserModule,

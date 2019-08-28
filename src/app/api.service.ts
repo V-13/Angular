@@ -20,4 +20,13 @@ export class ApiService {
   {
     return this.http.post("http://angular-info.herokuapp.com/searchAPI",data);
   }
+
+  deleteData(data)
+  {
+    return this.http.post("http://angular-info.herokuapp.com/deleteAPI",data);
+  }
+  updateData(data)
+  {
+    return this.http.post("http://angular-info.herokuapp.com/userupdate",data)
+  }
 }

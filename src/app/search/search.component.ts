@@ -31,6 +31,30 @@ export class SearchComponent implements OnInit {
      });
     }
 
+      deleteuser()
+      {
+        console.log(this.mydata[0]);
+        this.apiservice.deleteData(this.mydata[0]).subscribe((response:Array<object>)=>{
+          if(response.length>0)
+          {
+            alert('deleted')
+          }
+        })
+      }
+
+      updateuser()
+      {
+        console.log(this.mydata[0]);
+        this.apiservice.updateData(this.mydata[0]).subscribe((response:Array<object>)=>{
+          if(response.length>0)
+          {
+            alert('updated')
+            console.log(response)
+          }
+        })
+      }
+
+
   ngOnInit() {
   }
 
